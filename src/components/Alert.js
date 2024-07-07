@@ -1,0 +1,9 @@
+import React from 'react'
+export default function Alert(props) {
+    return (
+        props.alert && <div className={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert" id="myAlert">
+            <strong>{props.alert.type.charAt(0) + props.alert.type.slice(1)}!</strong> {props.alert.message}.
+            {/* <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> */}
+        </div>
+  )
+}
